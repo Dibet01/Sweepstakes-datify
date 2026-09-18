@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>18+ Premium Access · Adult Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,600&display=swap" rel="stylesheet">
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0c0818;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #f2edff;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem;
+    }
+
+    /* MAIN CARD – GLASSMORPHIC + PREMIUM VIBE */
+    .landing-card {
+      max-width: 1100px;
+      width: 100%;
+      background: rgba(16, 10, 28, 0.7);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 3rem;
+      border: 1px solid rgba(255, 70, 120, 0.25);
+      box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 60, 120, 0.1) inset;
+      padding: 2.4rem 2.2rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+
+    /* subtle animated glow */
+    .landing-card::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: -20%;
+      width: 160%;
+      height: 160%;
+      background: radial-gradient(circle at 30% 40%, rgba(255, 40, 100, 0.1), transparent 60%);
+      z-index: 0;
+      animation: ambientPulse 14s infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes ambientPulse {
+      0% { transform: scale(1) translateX(-2%); opacity: 0.5; }
+      100% { transform: scale(1.1) translateX(3%); opacity: 0.9; }
+    }
+
+    .landing-card > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* 18+ BADGE */
+    .age-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      border-radius: 100px;
+      padding: 0.35rem 1.2rem 0.35rem 0.8rem;
+      border: 1px solid #ff3b6f;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+      color: #ffbfd0;
+      margin-bottom: 1.8rem;
+      width: fit-content;
+    }
+
+    .age-badge span:first-child {
+      background: #ff1f57;
+      border-radius: 40px;
+      padding: 0.1rem 0.7rem;
+      font-weight: 800;
+      font-size: 0.7rem;
+      color: #fff;
+    }
+
+    /* HERO LAYOUT */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 780px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+      .hero-content .highlight {
+        justify-content: center;
+      }
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.8rem;
+      background: linear-gradient(135deg, #ffffff 0%, #ffb3c9 50%, #ff4e7a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-content h1 .glow {
+      text-shadow: 0 0 30px rgba(255, 40, 80, 0.3);
+    }
+
+    .highlight {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #ffb0c8;
+      margin-bottom: 1.2rem;
+      border-left: 4px solid #ff2e5e;
+      padding-left: 1rem;
+    }
+
+    .hero-content p {
+      color: #cfc7f0;
+      font-size: 1rem;
+      max-width: 90%;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 780px) {
+      .hero-content p {
+        max-width: 100%;
+      }
+    }
+
+    /* CTA BUTTON - with affiliate link */
+    .cta-primary {
+      display: inline-block;
+      background: linear-gradient(105deg, #ff1f57, #d60042);
+      padding: 1rem 2.6rem;
+      font-weight: 800;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border-radius: 60px;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 12px 30px -8px #c70040;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      width: fit-content;
+      backdrop-filter: blur(2px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .cta-primary:hover {
+      transform: scale(1.03);
+      background: linear-gradient(105deg, #ff3970, #e6004a);
+      box-shadow: 0 18px 40px -8px #ff0055;
+    }
+
+    .cta-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(4px);
+      border: 1px solid #ff4b7a;
+      color: #ffffff;
+      box-shadow: 0 8px 20px -10px rgba(255, 0, 70, 0.3);
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+    }
+
+    .cta-secondary:hover {
+      background: rgba(255, 40, 80, 0.2);
+      border-color: #ff7a9e;
+      box-shadow: 0 10px 28px -8px #ff1f57;
+      transform: scale(1.02);
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    /* RIGHT COLUMN – visual card */
+    .visual-card {
+      background: rgba(12, 6, 24, 0.6);
+      backdrop-filter: blur(6px);
+      border-radius: 2rem;
+      padding: 1.8rem 1.5rem;
+      border: 1px solid rgba(255, 70, 120, 0.25);
+      text-align: center;
+      box-shadow: 0 20px 30px -18px black;
+    }
+
+    .visual-card .big-emoji {
+      font-size: 4.5rem;
+      line-height: 1.2;
+      filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5));
+    }
+
+    .visual-card .stat-row {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin: 1rem 0 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      background: rgba(0,0,0,0.35);
+      border-radius: 40px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #e5d6ff;
+      border: 1px solid rgba(255, 100, 140, 0.15);
+    }
+
+    .stat-item span {
+      color: #ff8aac;
+      font-weight: 800;
+    }
+
+    /* FEATURES GRID */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.2rem;
+      margin: 2.5rem 0 1.8rem;
+    }
+
+    .feature {
+      background: rgba(13, 8, 26, 0.6);
+      backdrop-filter: blur(4px);
+      border-radius: 1.8rem;
+      padding: 1.2rem 0.8rem;
+      text-align: center;
+      border: 1px solid rgba(255, 80, 130, 0.15);
+      transition: 0.2s;
+    }
+
+    .feature:hover {
+      border-color: #ff4a7a;
+      background: rgba(30, 16, 48, 0.7);
+    }
+
+    .feature .icon {
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .feature h4 {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #f0e6ff;
+    }
+
+    .feature p {
+      font-size: 0.75rem;
+      color: #b3a6d6;
+      margin-top: 0.2rem;
+    }
+
+    /* LEGAL & DISCREET FOOTER */
+    .footer-legal {
+      margin-top: 2.2rem;
+      border-top: 1px solid rgba(255, 60, 120, 0.15);
+      padding-top: 1.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .legal-badge {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .legal-badge span {
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 1rem;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #b3a3d6;
+      border: 1px solid #3d2b47;
+    }
+
+    .footer-note {
+      font-size: 0.7rem;
+      color: #6f5d94;
+      text-align: right;
+    }
+
+    /* AGE VERIFICATION OVERLAY */
+    .age-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 1.5rem;
+      transition: opacity 0.4s ease;
+    }
+
+    .age-box {
+      max-width: 460px;
+      width: 100%;
+      background: #120d22;
+      border-radius: 2.5rem;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      border: 1px solid #ff3366;
+      box-shadow: 0 30px 60px -20px #000;
+    }
+
+    .age-box h2 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .age-box p {
+      color: #ccc3ec;
+      margin-bottom: 1.8rem;
+    }
+
+    .age-box .btn-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-yes {
+      background: #ff1f57;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-weight: 700;
+      border-radius: 60px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+      min-width: 120px;
+    }
+
+    .btn-yes:hover {
+      background: #ff2e66;
+      transform: scale(1.02);
+    }
+
+    .btn-no {
+      background: transparent;
+      border: 1px solid #885f77;
+      padding: 0.8rem 2rem;
+      border-radius: 60px;
+      color: #c8b3d1;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* hidden state for content */
+    .content-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .content-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 480px) {
+      .landing-card {
+        padding: 1.5rem 1rem;
+        border-radius: 2rem;
+      }
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      .cta-primary {
+        font-size: 1rem;
+        padding: 0.8rem 1.6rem;
+        width: 100%;
+        justify-content: center;
+      }
+      .cta-group {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .visual-card .stat-row {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- AGE VERIFICATION OVERLAY (18+ mandatory) -->
+  <div id="ageOverlay" class="age-overlay">
+    <div class="age-box">
+      <div style="font-size: 4rem; margin-bottom: 0.2rem;">🔞</div>
+      <h2>Age Verification</h2>
+      <p>You must be <strong>18 years or older</strong> to enter. This site contains adult content, marketing, and exclusive 18+ material.</p>
+      <div class="btn-group">
+        <button id="confirmAge" class="btn-yes">✔ I am 18+</button>
+        <button id="declineAge" class="btn-no">✖ Under 18</button>
+      </div>
+      <p style="font-size: 0.7rem; margin-top: 1.5rem; color: #8577b3;">By clicking "I am 18+" you agree to our terms and confirm legal age.</p>
+    </div>
+  </div>
+
+  <!-- MAIN LANDING PAGE (hidden until age verification) -->
+  <div id="landingContent" class="landing-card content-hidden">
+    <!-- 18+ badge -->
+    <div class="age-badge">
+      <span>18+</span> ADULT MARKETING · EXPLICIT
+    </div>
+
+    <!-- HERO -->
+    <div class="hero-grid">
+      <div class="hero-content">
+        <h1>Unlock <span class="glow">Premium</span> Adult Experience</h1>
+        <div class="highlight">🔥 Exclusive 18+ content · No limits · Instant access</div>
+        <p>Explore thousands of high-quality adult videos, live models, and exclusive marketing offers. Discreet, secure, and built for adults. Join now and get instant access.</p>
+        <div class="cta-group">
+          <!-- PRIMARY CTA BUTTON WITH AFFILIATE LINK -->
+          <a href="https://sexforfuns.com/n5fZXXdg?aid=gkdfdxphhx&kid=hxhzgafkzpx" target="_blank" rel="noopener noreferrer nofollow" id="mainCta" class="cta-primary">
+            🔥 ENTER & GET ACCESS
+          </a>
+          <a href="https://sexforfuns.com/n5fZXXdg?aid=gkdfdxphhx&kid=hxhzgafkzpx" target="_blank" rel="noopener noreferrer nofollow" class="cta-primary cta-secondary">
+            ⚡ VIP MEMBERSHIP
+          </a>
+        </div>
+        <p style="font-size: 0.75rem; margin-top: 0.8rem; color: #a392c9;">Limited spots · 18+ only · 4K & live</p>
+      </div>
+      <div class="visual-card">
+        <div class="big-emoji">🌙✨🔥</div>
+        <div style="font-weight: 700; font-size: 1.2rem; margin: 0.2rem 0; color: #ffa1bd;">+5000 exclusive scenes</div>
+        <div class="stat-row">
+          <span class="stat-item"><span>4K</span> UHD</span>
+          <span class="stat-item"><span>🔞</span> 18+ verified</span>
+          <span class="stat-item"><span>📱</span> mobile ready</span>
+        </div>
+        <p style="font-size: 0.8rem; color: #c5b7e6; margin-top: 0.5rem;">Live models · fetish · premium offers</p>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="features-grid">
+      <div class="feature">
+        <div class="icon">💎</div>
+        <h4>HD Library</h4>
+        <p>Daily updates, 4K & VR</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🔞</div>
+        <h4>Adult Only</h4>
+        <p>Strict 18+ environment</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🛡️</div>
+        <h4>Discreet</h4>
+        <p>SSL encrypted & private</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🎁</div>
+        <h4>Exclusive Offers</h4>
+        <p>Special deals for members</p>
+      </div>
+    </div>
+
+    <!-- SECONDARY CTA (again with same affiliate link) -->
+    <div style="text-align: center; margin: 0.5rem 0 0.2rem;">
+      <a href="https://sexforfuns.com/n5fZXXdg?aid=gkdfdxphhx&kid=hxhzgafkzpx" target="_blank" rel="noopener noreferrer nofollow" id="secondCta" class="cta-primary" style="background: linear-gradient(105deg, #6a2a6a, #3f1a4a); box-shadow: 0 10px 25px -12px #aa3a8a;">
+        🚀 CLAIM YOUR ACCESS NOW
+      </a>
+    </div>
+
+    <!-- FOOTER LEGAL -->
+    <div class="footer-legal">
+      <div class="legal-badge">
+        <span>🔞 18+</span>
+        <span>🛡️ Encrypted</span>
+        <span>🌍 Global</span>
+        <span>💳 Discreet</span>
+      </div>
+      <div class="footer-note">
+        © 2025 · SexForFuns · 18+ only. All models 18+
+      </div>
+    </div>
+    <p style="font-size: 0.65rem; color: #5e4f7a; text-align: center; margin-top: 0.6rem;">This site contains adult content. By clicking any button you confirm you are 18+.</p>
+  </div>
+
+  <script>
+    (function() {
+      const overlay = document.getElementById('ageOverlay');
+      const landing = document.getElementById('landingContent');
+      const confirmBtn = document.getElementById('confirmAge');
+      const declineBtn = document.getElementById('declineAge');
+
+      // Check session storage for verification
+      const verified = sessionStorage.getItem('adult_verified_18plus');
+      if (verified === 'true') {
+        overlay.style.display = 'none';
+        landing.classList.remove('content-hidden');
+        landing.classList.add('content-visible');
+      } else {
+        overlay.style.display = 'flex';
+        landing.classList.add('content-hidden');
+        landing.classList.remove('content-visible');
+      }
+
+      function verifyAndEnter() {
+        sessionStorage.setItem('adult_verified_18plus', 'true');
+        overlay.style.transition = 'opacity 0.3s ease';
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+          overlay.style.display = 'none';
+        }, 300);
+        landing.classList.remove('content-hidden');
+        landing.classList.add('content-visible');
+      }
+
+      function rejectUnderAge() {
+        // Show a friendly "under 18" message
+        const msg = document.createElement('div');
+        msg.style.position = 'fixed';
+        msg.style.inset = '0';
+        msg.style.backgroundColor = '#05020b';
+        msg.style.zIndex = '10000';
+        msg.style.display = 'flex';
+        msg.style.alignItems = 'center';
+        msg.style.justifyContent = 'center';
+        msg.style.color = 'white';
+        msg.style.fontFamily = 'sans-serif';
+        msg.innerHTML = `<div style="background:#140d24; padding:2.5rem; border-radius:2.5rem; max-width:400px; text-align:center; border:1px solid #ff2e5e;">
+          <div style="font-size:3rem;">⛔</div>
+          <h2 style="margin:0.5rem 0;">Access Denied</h2>
+          <p style="color:#bbadd6;">You must be 18 years or older to view adult content.</p>
+          <button id="backBtn" style="margin-top:1.2rem; background:#ff2e5e; border:none; padding:0.6rem 1.8rem; border-radius:40px; color:white; font-weight:bold; cursor:pointer;">Go Back</button>
+        </div>`;
+        document.body.appendChild(msg);
+        document.getElementById('backBtn')?.addEventListener('click', () => window.history.back());
+        overlay.style.display = 'none';
+      }
+
+      confirmBtn.addEventListener('click', verifyAndEnter);
+      declineBtn.addEventListener('click', rejectUnderAge);
+
+      // Additional safety: all CTA buttons must have the affiliate link
+      const ctaLinks = document.querySelectorAll('.cta-primary, .cta-secondary');
+      const targetUrl = 'https://sexforfuns.com/n5fZXXdg?aid=gkdfdxphhx&kid=hxhzgafkzpx';
+
+      ctaLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const isVerified = sessionStorage.getItem('adult_verified_18plus');
+          if (isVerified !== 'true') {
+            e.preventDefault();
+            if (overlay.style.display === 'none') {
+              overlay.style.display = 'flex';
+              overlay.style.opacity = '1';
+            }
+            alert('Please verify your age (18+) first.');
+          } else {
+            if (this.getAttribute('href') !== targetUrl) {
+              this.setAttribute('href', targetUrl);
+            }
+          }
+        });
+        // Ensure href is exactly the affiliate link
+        if (link.getAttribute('href') !== targetUrl) {
+          link.setAttribute('href', targetUrl);
+          link.setAttribute('target', '_blank');
+          link.setAttribute('rel', 'noopener noreferrer nofollow');
+        }
+      });
+
+      // Safeguard on load
+      window.addEventListener('load', function() {
+        const verifiedNow = sessionStorage.getItem('adult_verified_18plus');
+        if (verifiedNow !== 'true') {
+          landing.classList.add('content-hidden');
+          landing.classList.remove('content-visible');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
